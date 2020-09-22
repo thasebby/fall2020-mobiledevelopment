@@ -1,16 +1,30 @@
 import Sidebar from './components/Sidebar.js';
 
-const s = new Sidebar({
-  menu: [
-    'Albert Eggstein',
-    'Attila the Hen',
-    'Attila the Hen',
-    'Dixie Chick',
-    'Gregory Peck',
-    'Mary Poopins'
-  ]
-});
+render(){
+  const s = new Sidebar({
+    menu: [
+      'Albert Eggstein',
+      'Attila the Hen',
+      'Attila the Hen',
+      'Dixie Chick',
+      'Gregory Peck',
+      'Mary Poopins'
+    ]
+  });
 
+
+  }
+  const list = Sidebar.map((a) => <li key={a.menu})>{a.menu}</li>);
+
+  return{
+    <div>
+      <ul>
+        {list}
+      </ul>
+    </div>
+  };
+
+}
 /* 
   TODO: Use the render() method of Sidebar to show HTML response on console. Results should be wrapped in <ul></ul>
   
